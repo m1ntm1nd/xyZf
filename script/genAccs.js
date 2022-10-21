@@ -7,7 +7,7 @@ function main() {
 
     let farmAccs = {};
     
-    Array(100).fill(0).forEach(() => {
+    Array(25).fill(0).forEach(() => {
         var privateKey = "0x" + (crypto.randomBytes(32).toString('hex'));
         let wallet = new ethers.Wallet(privateKey, provider)
         console.log(wallet.address)
