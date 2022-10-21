@@ -1,7 +1,7 @@
 const { ethers } = require("ethers");
 const fs = require('fs');
 
-const targetAddress = '0xd4ce071678ddB49eaC87dB451e99015e41Efd817'
+const targetAddress = '0x50b13d37B37f596260B6A8B75742CCfC86Aa8340'
 
 const provider = ethers.getDefaultProvider('https://rpc-mumbai.maticvigil.com/')
 

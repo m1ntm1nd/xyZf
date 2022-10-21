@@ -2,6 +2,8 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 require('chromedriver');
 const fs = require('fs');
 
+let crypto = require('crypto');
+
 const faucet = 'https://faucet.polygon.technology/';
 const browser = 'chrome'
 
@@ -17,19 +19,34 @@ async function click_btn(address) {
       
       setTimeout(() => {
         driver.findElement(By.className('btn btn-primary btn-block')).click()
-      }, 3000)
+      }, 2500)
 
       setTimeout(() => {
         driver.findElement(By.xpath("//button[text()='Confirm']")).click()
-      }, 4000)
+      }, 3500)
 
       setTimeout(() => {
         driver.close();
-      }, 5000)
+      }, 4500)
     }
 
     iteration(driver);
 };
+
+// function genAccount() {
+//   const provider = ethers.getDefaultProvider('https://rpc-mumbai.maticvigil.com/')
+
+//   let farmAcc = {};
+//   var privateKey = "0x" + (crypto.randomBytes(32).toString('hex'));
+//   let wallet = new ethers.Wallet(privateKey, provider)
+//   farmAcc[wallet.address] = privateKey;
+  
+//   try {
+//     fs.writeFileSync('./farmAccounts.json', JSON.stringify(farmAccs));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
 async function nemain() {
   let farmAccs = {};
