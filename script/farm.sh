@@ -1,14 +1,16 @@
 #!/bin/bash
 
-node $(pwd)/genAccs.js
+nvm use v16.16.0
+
+node $(pwd)/src/genAccs.js
 
 for i in {0..25}
 do
-    node $(pwd)/main.js $i
+    node $(pwd)/src/main.js $i
     sleep 1
 done
 
-node $(pwd)/send.js
+node $(pwd)/src/send.js
 
 sleep 100
 
